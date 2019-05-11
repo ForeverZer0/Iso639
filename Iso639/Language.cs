@@ -262,5 +262,19 @@ namespace Iso639
                     yield return language;
             }
         }
+
+        /// <summary>
+        /// Gets the language associated with the specified <paramref name="culture"/>.
+        /// </summary>
+        /// <param name="culture">The culture to retrieve the language for.</param>
+        /// <returns>The language associated with the given culture, or <c>null</c> if none exists.</returns>
+        [CanBeNull]
+        public static Language FromCulture([CanBeNull] CultureInfo culture)
+        {
+            if (culture is null)
+                return null;
+            var language = FromPart1(culture.TwoLetterISOLanguageName);
+            return language ?? FromPart2(culture.ThreeLetterISOLanguageName);
+        }
     }
 }
