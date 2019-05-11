@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <LangVersion>7.1</LangVersion>
+        <Title>ISO-639</Title>
+        <Authors>Eric Freed</Authors>
+        <Description>Defines the ISO-639 language standard, with support for all parts, with conversion to/from cultures.</Description>
+        <Copyright>2019</Copyright>
+        <PackageTags>iso 639 iso639 language internationalization i18n culture</PackageTags>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageProjectUrl>https://github.com/ForeverZer0/Iso639</PackageProjectUrl>
+        <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/ForeverZer0/Iso639</RepositoryUrl>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DefineConstants>TRACE;RELEASE;NETSTANDARD;NETSTANDARD2_0;ISO639</DefineConstants>
+      <DocumentationFile>bin\Release\Iso639.xml</DocumentationFile>
+    </PropertyGroup>
+
+</Project>
